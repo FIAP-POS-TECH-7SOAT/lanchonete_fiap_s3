@@ -17,6 +17,9 @@ jobs:
       with:
         terraform_version: 1.9.4
 
+    - name: Print organization secret
+      run: echo "Organization secret is ${{ secrets.AWS_REGION }}"
+
     - name: Terraform Init
       run: terraform init
 
