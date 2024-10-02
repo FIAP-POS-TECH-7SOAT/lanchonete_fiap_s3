@@ -21,8 +21,8 @@ data "aws_caller_identity" "current" {}
 resource "aws_s3_bucket" "lanchonete-fiap-bucket" {
   bucket = "lanchonete-fiap-${data.aws_caller_identity.current.account_id}"
   tags = {
-   Description ="Store everything about lanchonete fiap"
-   ManagedBy = "Terraform"
+    Description = "Store everything about lanchonete fiap"
+    ManagedBy   = "Terraform"
   }
 }
 
